@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+       {% if user.username == "Sean" %}
+		<h1><i></i>Hello, {{ user.username }}!!!!</i></h1>
+		{% else %}
+        <h3>Hello, {{ user.username }}.</h3>
+        {% endif %}		
+		
+    <!--Loop here -->
+        {% for mov in movies %}
+        <div><p>{{ mov.movie }}, Score: <b>{{ mov.score }}</b></p></div>
+        {% endfor %}        
+{% endblock %}
+
